@@ -58,6 +58,10 @@
                     <label class="form-label">Password</label>
                     <input type="password" class="form-control" name="password" placeholder="Masukkan Password">
                 </div>
+                <div class="mb-3">
+                    <button type="submit">Simpan</button>
+                    <button type="reset">Kembali</button>
+                </div>
             </form>
         </div>
     </div>
@@ -77,7 +81,7 @@
             <b>NIS: </b><?= $nis ?><br>
             <b>Nama: </b><?= $nama ?><br>
             <b>Kelas: </b><?= $kelas ?><br>
-            <b>jk: </b><?= $jk ?><br>
+            <b>Jenis Kelamin: </b><?= $jk ?><br>
             <b>Username: </b><?= $username ?><br>
             <b>Email: </b><?= $email ?><br>
         </div>
