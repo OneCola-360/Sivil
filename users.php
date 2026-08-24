@@ -14,7 +14,7 @@ $user = mysqli_fetch_all($usersql, MYSQLI_ASSOC);
     <body>
         <div class="container my-4">
             <div class="row justify-content-center">
-                <h2>Users</h2>
+                <h2>Tabel Users</h2>
                 <div class="col-md-10">
                     <table id="tabelUser" class="table table-striped table-hover border">
                         <thead>
@@ -25,22 +25,22 @@ $user = mysqli_fetch_all($usersql, MYSQLI_ASSOC);
                                 <th scope="col">Role</th>
                                 <th scope="col" style="width: 15%;">Created At</th>
                             </tr>
-                        </thead>
-                        <tbody>
-                            <?php if (count($user) > 0): ?>
-                                <?php foreach( $user as $key ): ?>
+                         </thead>
+                         <tbody>
+                             <?php if (count($user) > 0): ?>
+                                <?php for($i = 0; $i < count($user); $i++): ?>
                                     <tr>
-                                        <td><?= $i = 1; $i++; ?></td>
-                                        <td><?= $key['username']; ?></td>
-                                        <td><?= $key['password']; ?></td>
-                                        <td><?= $key['role']; ?></td>
-                                        <td><?= $key['created_at'] ?></td>
+                                          <td><?php $j = $i + 1; echo $j; ?></td>
+                                          <td><?= $user[$i]['username']; ?></td>
+                                          <td><?= $user[$i]['password']; ?></td>
+                                          <td><?= $user[$i]['role']; ?></td>
+                                          <td><?= $user[$i]['created_at']; ?></td>
+                                                    </tr>
+                                                <?php endfor; ?>
+                                        <?php else: ?>
+                                    <tr>
+                                        <td colspan="5">Data Belum Di Isi</td>
                                     </tr>
-                                <?php endforeach; ?>
-                            <?php else: ?>
-                                <tr>
-                                    <td colspan="5">Data Belum Di Isi</td>
-                                </tr>
                             <?php endif; ?>
                         </tbody>
                     </table>
