@@ -19,11 +19,11 @@ $user = mysqli_fetch_all($usersql, MYSQLI_ASSOC);
                     <table id="tabelUser" class="table table-striped table-hover border">
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Username</th>
-                                <th>Password</th>
-                                <th>Role</th>
-                                <th>Created At</th>
+                                <th scope="col" style="width: 10%;">ID</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">Password</th>
+                                <th scope="col">Role</th>
+                                <th scope="col" style="width: 15%;">Created At</th>
                             </tr>
                         </thead>
                         <tbody>
