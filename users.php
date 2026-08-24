@@ -19,7 +19,7 @@ $user = mysqli_fetch_all($usersql, MYSQLI_ASSOC);
                     <table id="tabelUser" class="table table-striped table-hover border">
                         <thead>
                             <tr>
-                                <th scope="col" style="width: 10%;">ID</th>
+                                <th scope="col" style="width: 10%;">No</th>
                                 <th scope="col">Username</th>
                                 <th scope="col">Password</th>
                                 <th scope="col">Role</th>
@@ -30,7 +30,7 @@ $user = mysqli_fetch_all($usersql, MYSQLI_ASSOC);
                             <?php if (count($user) > 0): ?>
                                 <?php foreach( $user as $key ): ?>
                                     <tr>
-                                        <td><?= $key['id']; ?></td>
+                                        <td><?= $i = 1; $i++; ?></td>
                                         <td><?= $key['username']; ?></td>
                                         <td><?= $key['password']; ?></td>
                                         <td><?= $key['role']; ?></td>
