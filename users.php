@@ -30,8 +30,6 @@ $user = mysqli_fetch_all($usersql, MYSQLI_ASSOC);
                                 <th scope="col">User</th>
                                 <th scope="col">Username</th>
                                 <th scope="col">Password</th>
-                                <th scope="col">Role</th>
-                                <th scope="col" style="width: 15%;">Created At</th>
                             </tr>
                          </thead>
                          <tbody>
