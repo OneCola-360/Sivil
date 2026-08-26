@@ -38,18 +38,18 @@ $user = mysqli_fetch_all($usersql, MYSQLI_ASSOC);
                              <?php if (count($user) > 0): ?>
                                 <?php for($i = 0; $i < count($user); $i++): ?>
                                     <tr>
-                                          <td><?php $j = $i + 1; echo $j; ?></td>
-                                          <td><?= $user[$i]['nama']; ?></td>
-                                          <td><?= $user[$i]['username']; ?></td>
-                                          <td><?= $user[$i]['password']; ?></td>
-                                          <td><?= $user[$i]['role']; ?></td>
-                                          <td><?= $user[$i]['created_at']; ?></td>
-                                                    </tr>
-                                                <?php endfor; ?>
-                                        <?php else: ?>
-                                    <tr>
-                                        <td colspan="5">Data Belum Di Isi</td>
+                                        <td><?php $j = $i + 1; echo $j; ?></td>
+                                        <td><?= $user[$i]['nama']; ?></td>
+                                        <td><?= $user[$i]['username']; ?></td>
+                                        <td><?= $user[$i]['password']; ?></td>
+                                        <td><?= $user[$i]['role']; ?></td>
+                                        <td><?= $user[$i]['created_at']; ?></td>
                                     </tr>
+                                <?php endfor; ?>
+                            <?php else: ?>
+                                <tr>
+                                    <td colspan="5">Data Belum Di Isi</td>
+                                </tr>
                             <?php endif; ?>
                         </tbody>
                     </table>
