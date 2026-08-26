@@ -41,9 +41,7 @@ $user = mysqli_fetch_all($usersql, MYSQLI_ASSOC);
                                         <td><?php $j = $i + 1; echo $j; ?></td>
                                         <td><?= $user[$i]['nama']; ?></td>
                                         <td><?= $user[$i]['username']; ?></td>
-                                        <td><?= $user[$i]['password']; ?></td>
                                         <td><?= $user[$i]['role']; ?></td>
-                                        <td><?= $user[$i]['created_at']; ?></td>
                                     </tr>
                                 <?php endfor; ?>
                             <?php else: ?>
