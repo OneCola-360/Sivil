@@ -21,8 +21,8 @@ ORDER BY users.id desc;";
     <body>
         <div class="container my-4">
             <div class="row justify-content-center">
-                <h2>Tabel Users</h2>
                 <div class="col-md-10">
+                    <h2>Tabel Users</h2>
                     <table id="tabelUser" class="table table-striped table-hover border">
                         <thead>
                             <tr>
