@@ -23,7 +23,6 @@ $user = mysqli_fetch_all($usersql, MYSQLI_ASSOC);
                             <tr>
                                 <th scope="col" style="width: 10%;">No</th>
                                 <th scope="col">ID</th>
-                                <th scope="col">User</th>
                                 <th scope="col">Username</th>
                                 <th scope="col">Password</th>
                                 <th scope="col">Role</th>
