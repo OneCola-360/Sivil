@@ -30,6 +30,7 @@ $user = mysqli_fetch_all($usersql, MYSQLI_ASSOC);
                                 <th scope="col">User</th>
                                 <th scope="col">Username</th>
                                 <th scope="col">Password</th>
+                                <th scope="col">Aksi</th>
                             </tr>
                          </thead>
                          <tbody>
@@ -40,6 +41,7 @@ $user = mysqli_fetch_all($usersql, MYSQLI_ASSOC);
                                         <td><?= $user[$i]['nama']; ?></td>
                                         <td><?= $user[$i]['username']; ?></td>
                                         <td><?= $user[$i]['role']; ?></td>
+                                        <td></td>
                                     </tr>
                                 <?php endfor; ?>
                             <?php else: ?>
