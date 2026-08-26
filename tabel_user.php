@@ -1,12 +1,7 @@
 <?php
 include("konek.php");
 
-$sql = "SELECT *,
-COALESCE (siswa.nama, guru.nama) AS nama
-FROM users
-LEFT JOIN siswa ON users.id = siswa.user_id
-LEFT JOIN guru ON users.id = guru.user_id
-ORDER BY users.id desc;";
+$sql = "SELECT * FROM users;";
 
 $usersql = mysqli_query($konek, $sql);
 
