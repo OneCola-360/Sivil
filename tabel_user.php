@@ -43,7 +43,7 @@ $user = mysqli_fetch_all($usersql, MYSQLI_ASSOC);
                                 <?php endfor; ?>
                             <?php else: ?>
                                 <tr>
-                                    <td colspan="5">Data Belum Di Isi</td>
+                                    <td colspan="6">Data Belum Di Isi</td>
                                 </tr>
                             <?php endif; ?>
                         </tbody>
