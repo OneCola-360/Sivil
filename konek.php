@@ -20,7 +20,7 @@ $konek = mysqli_connect("127.0.0.1", "root", "", "db_sakuci");
         </style>
     </head>
     <body>
-        <?php if(!konek): ?>
+        <?php if(!$konek): ?>
             <div class="gagal"><?= die("Koneksi Gagal: " . mysqli_connect_error()); ?></div>
         <?php else: ?>
             <div class="koneksi"><?= "Koneksi Berhasil"; ?></div>
