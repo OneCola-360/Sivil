@@ -30,7 +30,7 @@ $user = mysqli_fetch_all($usersql, MYSQLI_ASSOC);
                             </tr>
                          </thead>
                          <tbody>
-                             <?php if (count($user) > 0): ?>
+                            <?php if (count($user) > 0): ?>
                                 <?php for($i = 0; $i < count($user); $i++): ?>
                                     <tr>
                                         <td><?php $j = $i + 1; echo $j; ?></td>
@@ -52,4 +52,4 @@ $user = mysqli_fetch_all($usersql, MYSQLI_ASSOC);
             </div>
         </div>
     </body>
-</html>s
+</html>
