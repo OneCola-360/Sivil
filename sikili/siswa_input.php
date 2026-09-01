@@ -20,15 +20,15 @@
             <form action="" method="post">
                 <div class="mb-3">
                     <label class="form-label">Nomor Induk Siswa</label>
-                    <input type="text" class="form-control" name="nis" placeholder="Contoh: 12345678">
+                    <input type="text" class="form-control" name="nis" placeholder="Contoh: 12345678" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Nama Lengkap Siswa</label>
-                    <input type="text" class="form-control" name="nama" placeholder="Contoh: Ujang A">
+                    <input type="text" class="form-control" name="nama" placeholder="Contoh: Ujang A" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Kelas Siswa</label>
-                    <input type="text" class="form-control" name="kelas" placeholder="Contoh: XI-RPL-1">
+                    <input type="text" class="form-control" name="kelas" placeholder="Contoh: XI-RPL-1" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Jenis Kelamin</label>
@@ -49,15 +49,15 @@
                 <h4>Data Kredensial Akun</h4>
                 <div class="mb-3">
                     <label class="form-label">Username</label>
-                    <input type="text" class="form-control" name="username" placeholder="Masukkan Username">
+                    <input type="text" class="form-control" name="username" placeholder="Masukkan Username" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Id</label>
-                    <input type="number" class="form-control" name="id" placeholder="Masukkan ID Akun">
+                    <input type="number" class="form-control" name="id" placeholder="Masukkan ID Akun" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Password</label>
-                    <input type="password" class="form-control" name="password" placeholder="Masukkan Password">
+                    <input type="password" class="form-control" name="password" placeholder="Masukkan Password" required>
                 </div>
                 <div class="mb-3">
                     <button type="submit" class="btn btn-primary">Simpan</button>

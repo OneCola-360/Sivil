@@ -20,15 +20,15 @@
             <form action="" method="post">
                 <div class="mb-3">
                     <label class="form-label">Nomor Induk Pengajar</label>
-                    <input type="text" class="form-control" name="nip" placeholder="Contoh: 12345678">
+                    <input type="text" class="form-control" name="nip" placeholder="Contoh: 12345678" require>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Nama Lengkap Guru</label>
-                    <input type="text" class="form-control" name="nama" placeholder="Contoh: Ujang Acep">
+                    <input type="text" class="form-control" name="nama" placeholder="Contoh: Ujang Acep" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Mapel Guru</label>
-                    <input type="text" class="form-control" name="mapel" placeholder="Contoh: RPL">
+                    <input type="text" class="form-control" name="mapel" placeholder="Contoh: RPL" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Jenis Kelamin</label>
@@ -49,11 +49,11 @@
                 <h4>Data Kredensial Akun</h4>
                 <div class="mb-3">
                     <label class="form-label">Username</label>
-                    <input type="text" class="form-control" name="username" placeholder="Masukkan Username">
+                    <input type="text" class="form-control" name="username" placeholder="Masukkan Username" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">ID</label>
-                    <input type="text" class="form-control" name="username" placeholder="Masukkan Username">
+                    <input type="text" class="form-control" name="username" placeholder="Masukkan Username" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Role</label>
@@ -68,7 +68,7 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Password</label>
-                    <input type="password" class="form-control" name="password" placeholder="Masukkan Password">
+                    <input type="password" class="form-control" name="password" placeholder="Masukkan Password" required>
                 </div>
                 <div class="mb-3">
                     <button type="submit" class="btn btn-primary">Simpan</button>

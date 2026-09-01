@@ -22,7 +22,7 @@
                 <h4>Data Kredensial Akun</h4>
                 <div class="mb-3">
                     <label class="form-label">Username</label>
-                    <input type="text" class="form-control" name="username" placeholder="Masukkan Username">
+                    <input type="text" class="form-control" name="username" placeholder="Masukkan Username" require>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Role</label>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Password</label>
-                    <input type="password" class="form-control" name="password" placeholder="Masukkan Password">
+                    <input type="password" class="form-control" name="password" placeholder="Masukkan Password" required>
                 </div>
                 <div class="mb-3">
                     <button type="submit" class="btn btn-primary">Simpan</button>
