@@ -1,4 +1,4 @@
-<?php require("konek.php"); ?>
+<?php require("../konek.php"); ?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -17,7 +17,7 @@
         <div class="card-body">
             <h4>Data Profil Users</h4>
             <hr>
-            <form action="" method="post">
+            <form action="../aksi/aksi_akun.php" method="post">
                 <hr>
                 <h4>Data Kredensial Akun</h4>
                 <div class="mb-3">
@@ -45,7 +45,7 @@
                 </div>
                 <div class="mb-3">
                     <button type="submit" class="btn btn-primary">Simpan</button>
-                    <button type="reset" class="btn btn-secondarys">Kembali</button>
+                    <button type="reset" class="btn btn-secondary">Kembali</button>
                 </div>
             </form>
         </div>
