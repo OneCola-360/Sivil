@@ -16,8 +16,7 @@
         </div>
         <div class="card-body">
             <h4>Data Profil Siswa</h4>
-            <hr>
-            <form action="" method="post">
+            <form action="../aksi/aksi_siswa.php" method="post">
                 <div class="mb-3">
                     <label class="form-label">Nomor Induk Siswa</label>
                     <input type="number" class="form-control" name="nis" placeholder="Contoh: 12345678" required>

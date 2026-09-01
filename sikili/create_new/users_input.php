@@ -16,7 +16,6 @@
         </div>
         <div class="card-body">
             <h4>Data Profil Users</h4>
-            <hr>
             <form action="../aksi/aksi_akun.php" method="post">
                 <hr>
                 <h4>Data Kredensial Akun</h4>
@@ -27,15 +26,15 @@
                 <div class="mb-3">
                     <label class="form-label">Role</label>
                     <div class="form-check">
-                        <input type="radio" class="form-control" name="role" value="guru" id="guru">
+                        <input type="radio" class="form-check-input" name="role" value="guru" id="guru">
                         <label class="form-check-label" for="guru">Guru</label>
                     </div>
                     <div class="form-check">
-                        <input type="radio" class="form-control" name="role" value="admin" id="admin">
+                        <input type="radio" class="form-check-input" name="role" value="admin" id="admin">
                         <label class="form-check-label" for="admin">Admin</label>
                     </div>
                     <div class="form-check">
-                        <input type="radio" class="form-control" name="role" value="siswa" id="siswa">
+                        <input type="radio" class="form-check-input" name="role" value="siswa" id="siswa">
                         <label class="form-check-label" for="siswa">Siswa</label>
                     </div>
                 </div>

@@ -45,7 +45,6 @@
                         </label>
                     </div>
                 </div>
-                <hr>
                 <h4>Data Kredensial Akun</h4>
                 <div class="mb-3">
                     <label class="form-label">Username</label>
