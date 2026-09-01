@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Tambah Siswa</title>
+    <title>Form Tambah Guru</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -12,23 +12,23 @@
 <div class="container mt-5" style="width=50%">
     <div class="card shadow">
         <div class="card-header">
-            <h3>Form Tambah Siswa</h3>
+            <h3>Form Tambah Guru</h3>
         </div>
         <div class="card-body">
-            <h4>Data Profil Siswa</h4>
+            <h4>Data Profil Guru</h4>
             <hr>
             <form action="" method="post">
                 <div class="mb-3">
-                    <label class="form-label">Nomor Induk Siswa</label>
-                    <input type="text" class="form-control" name="nis" placeholder="Contoh: 12345678">
+                    <label class="form-label">Nomor Induk Pengajar</label>
+                    <input type="text" class="form-control" name="nip" placeholder="Contoh: 12345678">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Nama Lengkap Siswa</label>
-                    <input type="text" class="form-control" name="nama" placeholder="Contoh: Ujang A">
+                    <label class="form-label">Nama Lengkap Guru</label>
+                    <input type="text" class="form-control" name="nama" placeholder="Contoh: Ujang Acep">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Kelas Siswa</label>
-                    <input type="text" class="form-control" name="kelas" placeholder="Contoh: XI-RPL-1">
+                    <label class="form-label">Mapel Guru</label>
+                    <input type="text" class="form-control" name="mapel" placeholder="Contoh: RPL">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Jenis Kelamin</label>
@@ -52,8 +52,19 @@
                     <input type="text" class="form-control" name="username" placeholder="Masukkan Username">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Id</label>
-                    <input type="number" class="form-control" name="id" placeholder="Masukkan ID Akun">
+                    <label class="form-label">ID</label>
+                    <input type="text" class="form-control" name="username" placeholder="Masukkan Username">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Role</label>
+                    <div class="form-check">
+                        <input type="radio" class="form-control" name="role" value="guru" id="guru">
+                        <label class="form-check-label" for="guru">Guru</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-control" name="role" value="admin" id="admin">
+                        <label class="form-check-label" for="admin">Admin</label>
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Password</label>
@@ -66,6 +77,7 @@
             </form>
         </div>
     </div>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
