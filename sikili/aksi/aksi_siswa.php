@@ -14,7 +14,7 @@ if ($username !== "nn" || $role !== "nn" || $password !== "nn" || !in_array($nis
     $sqlid = mysqli_fetch_all(mysqli_query($konek, "SELECT id FROM siswa"), MYSQLI_ASSOC);
     $id =  count($sqlid);
     if (in_array($user_id, $dbsiswa) && in_array($username, $dbsiswa) && in_array($password, $dbsiswa)) {
-        mysqli_query($konek, "INSERT INTO siswa (id, nis, nama, kelas, jenis_kelamin, user_id) VALUES (" . $id . $nis . $nama . $kelas . $jk . $user_id . ")");
+        mysqli_query($konek, "INSERT INTO siswa (id, nis, nama, kelas, jenis_kelamin, user_id) VALUES (" . $id . "," . $nis . "," . $nama . "," . $kelas . "," . $jk . "," . $user_id . ")");
     }
 } else return;
 ?>
@@ -32,7 +32,9 @@ if ($username !== "nn" || $role !== "nn" || $password !== "nn" || !in_array($nis
                         <h3>Data berhasil ditambahkan</h3>
                     </div>
                     <form action="../create_new/siswa_input.php">
-                        <button class="btn btn-primary" type="submit">Kembali</button>
+                        <div class="mb-3">
+                            <button class="btn btn-primary" type="submit">Kembali</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -45,10 +47,14 @@ if ($username !== "nn" || $role !== "nn" || $password !== "nn" || !in_array($nis
                     <div class="card-body">
                         <h3>Akun tidak ditemukan</h3>
                         <form action="../create_new/users_input.php">
-                            <button class="btn btn-primary" type="submit">Buat Baru</button>
+                            <div class="mb-3">
+                                <button class="btn btn-primary" type="submit">Buat Baru</button>
+                            </div>
                         </form>
                         <form action="../create_new/siswa_input.php">
-                            <button class="btn btn-secondary" type="submit">Kembali</button>
+                            <div class="mb-3">
+                                <button class="btn btn-secondary" type="submit">Kembali</button>
+                            </div>
                         </form>
                     </div>
                 </div>
