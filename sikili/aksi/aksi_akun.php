@@ -42,6 +42,16 @@ if ($username !== "nn" || $role !== "nn" || $password !== "nn") {
 } else return;
 
 if ($role == "admin"):
+    $nik = $_POST["nip"] ?? "nn";
+    $nama = $_POST["nama"] ?? "nn";
+    $jk = $_POST["jk"] ?? "nn";
+
+    if ($nik !== "nn" && $nama !== "nn" && $kelas !== "nn" && $jk !== "nn") {
+        $sqlid = mysqli_fetch_all(mysqli_query($konek, "SELECT id FROM siswa"), MYSQLI_ASSOC);
+        $id =  count($sqlid) + 1;
+
+        mysqli_query($konek, "INSERT INTO guru (id, nip, nama, jenis_kelamin) VALUES (" . $id . "," . $nik . ",'" . $nama . "','" . $jk . "')");
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -70,6 +80,17 @@ if ($role == "admin"):
 <?php 
 endif;
 if ($role == "siswa"):
+    $nik = $_POST["nis"] ?? "nn";
+    $nama = $_POST["nama"] ?? "nn";
+    $kelas = $_POST["kelas"] ?? "nn";
+    $jk = $_POST["jk"] ?? "nn";
+
+    if ($nik !== "nn" && $nama !== "nn" && $kelas !== "nn" && $jk !== "nn") {
+        $sqlid = mysqli_fetch_all(mysqli_query($konek, "SELECT id FROM siswa"), MYSQLI_ASSOC);
+        $id =  count($sqlid) + 1;
+
+        mysqli_query($konek, "INSERT INTO siswa (id, nis, nama, kelas, jenis_kelamin) VALUES (" . $id . "," . $nik . ",'" . $nama . "','" . $kelas . "','" . $jk . "')");
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -98,6 +119,16 @@ if ($role == "siswa"):
 <?php 
 endif;
 if ($role == "guru"):
+    $nik = $_POST["nip"] ?? "nn";
+    $nama = $_POST["nama"] ?? "nn";
+    $jk = $_POST["jk"] ?? "nn";
+
+    if ($nik !== "nn" && $nama !== "nn" && $kelas !== "nn" && $jk !== "nn") {
+        $sqlid = mysqli_fetch_all(mysqli_query($konek, "SELECT id FROM siswa"), MYSQLI_ASSOC);
+        $id =  count($sqlid) + 1;
+
+        mysqli_query($konek, "INSERT INTO guru (id, nip, nama, jenis_kelamin) VALUES (" . $id . "," . $nik . ",'" . $nama . "','" . $jk . "')");
+    }
 ?>
 <!DOCTYPE html>
 <html>
