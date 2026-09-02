@@ -66,6 +66,7 @@ if ($role == "admin"):
                     <h3>Data berhasil ditambahkan</h3>
                 </div>
                 <div class="card-body">
+                    <h3>Akun Admin dan Data Admin sudah ditambahkan</h3>
                     <form action="../create_new/admin_input.php">
                         <div class="mb-3">
                             <button class="btn btn-primary" type="submit">Kembali</button>
@@ -105,6 +106,7 @@ if ($role == "siswa"):
                     <h3>Data berhasil ditambahkan</h3>
                 </div>
                 <div class="card-body">
+                    <h3>Akun Siswa dan Data Siswa sudah ditambahkan</h3>
                     <form action="../create_new/siswa_input.php">
                         <div class="mb-3">
                             <button class="btn btn-primary" type="submit">Kembali</button>
@@ -143,6 +145,7 @@ if ($role == "guru"):
                     <h3>Data berhasil ditambahkan</h3>
                 </div>
                 <div class="card-body">
+                    <h3>Akun Guru dan Data Guru sudah ditambahkan</h3>
                     <form action="../create_new/guru_input.php">
                         <div class="mb-3">
                             <button class="btn btn-primary" type="submit">Kembali</button>
