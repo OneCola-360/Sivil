@@ -1,16 +1,9 @@
 <?php 
 require("../konek.php");
+$role = $_POST["role"];
+if ($role = "admin"):
 
-$username = $_POST["username"] ?? "nn";
-$role = $_POST["role"] ?? "nn";
-$password = password_hash($_POST["password"], PASSWORD_DEFAULT);
-
-if ($username !== "nn" || $role !== "nn" || $password !== "nn") {
-    $sqlid = mysqli_fetch_all(mysqli_query($konek, "SELECT id FROM users"), MYSQLI_ASSOC);
-    $id =  count($sqlid) + 1;
-
-    mysqli_query($konek, "INSERT INTO users (id, username, password, role) VALUES (" . $id . ",'" . $username . "','" . $password . "','" . $role . "')");
-} else return;
+    
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,7 +12,7 @@ if ($username !== "nn" || $role !== "nn" || $password !== "nn") {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
-    <div class="container mt-5" style="width=50%">
+        <div class="container mt-5" style="width=50%">
             <div class="card shadow">
                 <div class="card-header">
                     <h3>Data berhasil ditambahkan</h3>
@@ -37,24 +30,10 @@ if ($username !== "nn" || $role !== "nn" || $password !== "nn") {
 </html>
 
 <?php 
-require("../konek.php");
+endif;
+if ($role = "siswa"):
 
-$nis = $_POST["nis"] ?? "nn";
-$nama = $_POST["nama"] ?? "nn";
-$kelas = $_POST["kelas"] ?? "nn";
-$jk = $_POST["jk"] ?? "nn";
-$username = $_POST["username"] ?? "nn";
-$user_id = $_POST["id"] ?? "nn";
-$password = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
-if ($username !== "nn" || $role !== "nn" || $password !== "nn" || !in_array($nis, $dbsiswa) || $nama !== "nn" || $kelas !== "nn" || $jk!== "nn") {
-    $dbsiswa = mysqli_fetch_all(mysqli_query($konek, "SELECT id, username, password, role FROM users"), MYSQLI_ASSOC);
-    $sqlid = mysqli_fetch_all(mysqli_query($konek, "SELECT id FROM siswa"), MYSQLI_ASSOC);
-    $id =  count($sqlid);
-    if (in_array($user_id, $dbsiswa) && in_array($username, $dbsiswa) && in_array($password, $dbsiswa)) {
-        mysqli_query($konek, "INSERT INTO siswa (id, nis, nama, kelas, jenis_kelamin, user_id) VALUES (" . $id . "," . $nis . "," . $nama . "," . $kelas . "," . $jk . "," . $user_id . ")");
-    }
-} else return;
 ?>
 <!DOCTYPE html>
 <html>
@@ -102,23 +81,9 @@ if ($username !== "nn" || $role !== "nn" || $password !== "nn" || !in_array($nis
 </html>
 
 <?php 
-require("../konek.php");
+endif;
+if ($role = "guru"):
 
-$nip = $_POST["nip"] ?? "nn";
-$nama = $_POST["nama"] ?? "nn";
-$username = $_POST["username"] ?? "nn";
-$jk = $_POST["jk"] ?? "nn";
-$user_id = $_POST["id"] ?? "nn";
-$password = password_hash($_POST["password"], PASSWORD_DEFAULT);
-
-if ($username !== "nn" || $password !== "nn" || !in_array($nip, $dbusers) || $nama !== "nn" || $user_id !== "nn" || $jk!== "nn") {
-    $dbusers = mysqli_fetch_all(mysqli_query($konek, "SELECT id, username, password, role FROM users"), MYSQLI_ASSOC);
-    $sqlid = mysqli_fetch_all(mysqli_query($konek, "SELECT id FROM guru"), MYSQLI_ASSOC);
-    $id =  count($sqlid);
-    if (in_array($user_id, $dbusers) && in_array($username, $dbusers) && in_array($password, $dbusers)) {
-        mysqli_query($konek, "INSERT INTO siswa (id, nip, nama, jenis_kelamin, user_id) VALUES (" . $id . "," . $nip . "," . $nama . "," . $jk . "," . $user_id . ")");
-    }
-} else return;
 ?>
 <!DOCTYPE html>
 <html>
@@ -164,3 +129,4 @@ if ($username !== "nn" || $password !== "nn" || !in_array($nip, $dbusers) || $na
         <?php endif; ?>
     </body>
 </html>
+<?php endif; ?>
