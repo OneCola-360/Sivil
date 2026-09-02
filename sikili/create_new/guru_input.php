@@ -17,7 +17,7 @@
         <div class="card-body">
             <h4>Data Profil Guru</h4>
             <hr>
-            <form action="" method="post">
+            <form action="../aksi/aksi_akun.php" method="post">
                 <div class="mb-3">
                     <label class="form-label">Nomor Induk Pengajar</label>
                     <input type="number" class="form-control" name="nip" placeholder="Contoh: 12345678" require>
@@ -25,10 +25,6 @@
                 <div class="mb-3">
                     <label class="form-label">Nama Lengkap Guru</label>
                     <input type="text" class="form-control" name="nama" placeholder="Contoh: Ujang Acep" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Mapel Guru</label>
-                    <input type="text" class="form-control" name="mapel" placeholder="Contoh: RPL" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Jenis Kelamin</label>
@@ -55,17 +51,6 @@
                     <input type="text" class="form-control" name="username" placeholder="Masukkan Username" required>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Role</label>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" name="role" value="guru" id="guru">
-                        <label class="form-check-label" for="guru">Guru</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="radio" class="form-check-input" name="role" value="admin" id="admin">
-                        <label class="form-check-label" for="admin">Admin</label>
-                    </div>
-                </div>
-                <div class="mb-3">
                     <label class="form-label">Password</label>
                     <input type="password" class="form-control" name="password" placeholder="Masukkan Password" required>
                 </div>
@@ -73,6 +58,7 @@
                     <button type="submit" class="btn btn-primary">Simpan</button>
                     <button type="reset" class="btn btn-secondary">Kembali</button>
                 </div>
+                <input type="text" value="guru" style="display: none;" name="role" id="role" readonly>
             </form>
         </div>
     </div>

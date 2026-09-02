@@ -62,6 +62,7 @@
                     <button type="submit" class="btn btn-primary">Simpan</button>
                     <button type="reset" class="btn btn-secondary">Kembali</button>
                 </div>
+                <input type="text" value="siswa" style="display: none;" name="role" id="role">
             </form>
         </div>
     </div>
